@@ -586,9 +586,6 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .islands__bg {
-    object-fit: cover;
-  }
   .parent {
     margin-inline: 0;
   }
