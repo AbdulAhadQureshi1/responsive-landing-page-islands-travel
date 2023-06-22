@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .form-wrapper .form {
     display: flex;
@@ -27,6 +28,7 @@
     border-radius: 5px;
     font-size: var(--body-font-size);
     box-shadow: 0px 0px 0px 1px var(--dark-color);
+    min-width: 200px;
 }
 .input:focus {
     outline: 0;
@@ -38,6 +40,7 @@
 }
 .form > div > .input {
     width: 48%;
+    max-width: 500px;
 }
 .form > textarea {
     height: 10vh;
@@ -55,6 +58,7 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    min-width: 200px;
 }
 .address {
     margin-top: 10vh;
@@ -85,7 +89,7 @@
 }
 
 .map {
-    width: 500px;
+    width: 800px;
     height: 450px;
     border-radius: 20px;
     box-shadow: 100px 35px 50px 0px rgba(0, 0, 0, 0.3);
@@ -94,9 +98,58 @@
 }
 .map iframe {
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
 }
 .map:hover {
     box-shadow: 100px 35px 30px -10px rgba(0, 0, 0, 0.3);
     transform: scale(0.99);
     transition: 200ms;
 }
+
+@media screen and (max-width:1200px) {
+    .contact {
+        margin: 15vh 2rem;
+    }
+    .wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper .text {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper .text .item {
+        justify-content: center;
+        align-items: center;
+    }
+    .address {
+        margin-top: 15vh;
+    }
+    .map {
+        width: 100%;
+    }
+    .form-wrapper .form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form > div {
+        flex-wrap: wrap;
+        gap: 3vh;
+    } 
+    .form > div > .input {
+        width: 100%;
+    }
+    .wrapper .text .item {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .text .item {
+        text-align: center;
+    }
+}  

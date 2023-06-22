@@ -13,8 +13,8 @@
 }
 .gallery h3 {
     font-size: calc(var(--body-font-size) + 1rem);
-    line-height: 0.3;
     margin-top: 10vh;
+    text-align: center;
 }
 .gallery .row {
     display: flex;
@@ -42,4 +42,17 @@
     filter: brightness(100%);
     transition: 200ms;
     transform: scale(1.02);
+}
+
+@media screen and (max-width: 1250px) {
+    .row {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 420px) {
+    .row > * {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
 }
