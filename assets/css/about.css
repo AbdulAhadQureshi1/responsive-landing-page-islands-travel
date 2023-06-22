@@ -1,0 +1,19 @@
+.islands.about_pg {
+    height: 70vh !important;
+}
+.islands__title.about_pg {
+    line-height: 0.8;
+    margin-bottom: 20px;
+}
+.bd-container.about_pg {
+    width: 100vw;
+    margin-top: 10vh;
+}
+.about__container{
+    margin-top: 15vh;
+}
+@media screen and (min-width: 1200px) {
+    .about.about_pg {
+        flex-direction: row;
+    }
+}
