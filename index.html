@@ -37,7 +37,7 @@
     <!--========== HEADER ==========-->
     <header class="header">
       <nav class="nav bd-container" id="nav">
-        <a href="/" class="nav__logo">DM Events</a>
+        <a href="/" class="nav__logo">Diwan Al Maliki</a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
@@ -45,13 +45,13 @@
               <a href="/" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="./about" class="nav__link">About Us</a>
+              <a href="#about" class="nav__link">About Us</a>
             </li>
             <li class="nav__item">
               <a href="./gallery" class="nav__link">Gallery</a>
             </li>
             <li class="nav__item">
-              <a href="./contact/" class="nav__link">Contact Us</a>
+              <a href="#contact" class="nav__link">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -79,7 +79,8 @@
                 <h2 class="islands__subtitle">Tents</h2>
                 <h1 class="islands__title">Transparent PVC</h1>
                 <p class="islands__description">
-                  We do the transparent PVC tents that look aesthetically awesome!
+                  We do the transparent PVC tents that look aesthetically
+                  awesome!
                 </p>
                 <a href="./gallery" class="islands__button"
                   >Explore
@@ -124,7 +125,8 @@
                 <h2 class="islands__subtitle">Wedding</h2>
                 <h1 class="islands__title">Stages & Koshahs</h1>
                 <p class="islands__description">
-                  We do the wedding stages and Koshahs that look aesthetically awesome!
+                  We do the wedding stages and Koshahs that look aesthetically
+                  awesome!
                 </p>
                 <a href="./gallery" class="islands__button"
                   >Explore
@@ -156,7 +158,6 @@
               </div>
             </div>
           </section>
-
         </div>
       </div>
 
@@ -186,23 +187,26 @@
         </div>
       </div>
     </main>
-    
+
     <!--========== ABOUT US ==========-->
-    
-    <section class="about container">
-      <img src="assets/img/Transparent Tent/about4.jpg" alt="" class="about__img" />
+
+    <section class="about container" id="about">
+      <img
+        src="assets/img/Transparent Tent/about4.jpg"
+        alt=""
+        class="about__img"
+      />
       <div class="text">
         <h2>Our Mission 🚀</h2>
         <h3>
           “You do not need a mentor when you have many heroes” ~ Philosopher
         </h3>
         <p>
-          At DM Events, our mission is to delight and nourish our clients
-          through exceptional catering experiences. We are dedicated to creating
-          unforgettable moments by crafting delectable menus tailored to their
-          unique preferences. With a relentless commitment to quality,
-          innovation, and impeccable service.
-          <a href="./about">Read More</a>
+          Welcome to Diwan Al malaki, your premier destination for creating
+          unforgettable moments and transforming ordinary spaces into
+          extraordinary experiences since 2007. With a passion for perfection
+          and an eye for detail, we specialize in crafting exquisite wedding
+          settings, illuminating atmospheres, and orchestrating seamless events.
         </p>
       </div>
     </section>
@@ -213,39 +217,63 @@
         <div class="row1">
           <div>
             <div>
-              <img src="assets/img/koshas and weeding stages/IMG-20230121-WA0096.jpg" alt="" class="service__img" />
+              <img
+                src="assets/img/koshas and weeding stages/IMG-20230121-WA0096.jpg"
+                alt=""
+                class="service__img"
+              />
             </div>
             <p>Wedding Stage (kosha)-كوشه</p>
           </div>
           <div>
             <div>
-              <img src="assets/img/koshas and weeding stages/IMG-20230112-WA0020.jpg" alt="" class="service__img" />
+              <img
+                src="assets/img/koshas and weeding stages/IMG-20230112-WA0020.jpg"
+                alt=""
+                class="service__img"
+              />
             </div>
             <p>Wedding Stage (kosha)-كوشه</p>
           </div>
           <div>
             <div>
-              <img src="assets/img/Fairy lights/b0251967-5cd4-4ed8-a167-16508203c967.jpg" alt="" class="service__img" />
+              <img
+                src="assets/img/Fairy lights/b0251967-5cd4-4ed8-a167-16508203c967.jpg"
+                alt=""
+                class="service__img"
+              />
             </div>
             <p>Fairy Lights</p>
           </div>
         </div>
         <div class="row2">
           <div>
-            <div>  
-              <img src="assets/img/PVC Tents/IMG-20220923-WA0048.jpg" alt="" class="service__img" />
+            <div>
+              <img
+                src="assets/img/PVC Tents/IMG-20220923-WA0048.jpg"
+                alt=""
+                class="service__img"
+              />
             </div>
             <p>PVC Tents</p>
           </div>
           <div>
             <div>
-              <img src="assets/img/PVC Tents/IMG-20220820-WA0009.jpg" alt="" class="service__img" />
+              <img
+                src="assets/img/PVC Tents/IMG-20220820-WA0009.jpg"
+                alt=""
+                class="service__img"
+              />
             </div>
             <p>PVC Tents</p>
           </div>
           <div>
             <div>
-              <img src="assets/img/Transparent Tent/IMG-20230104-WA0035.jpg" alt="" class="service__img" />
+              <img
+                src="assets/img/Transparent Tent/IMG-20230104-WA0035.jpg"
+                alt=""
+                class="service__img"
+              />
             </div>
             <p>Transparent Tents</p>
           </div>
@@ -261,17 +289,68 @@
 
     <!--========== CONTACT ==========-->
 
-    <section class="contact-main">
+    <section class="contact-main" id="contact">
       <h2>Have something in mind? 🤔</h2>
       <h3>Feel free to reach out to us!</h3>
-      <a href="./contact" class="primary-btn">Contact Us</a>
+      <div class="form-wrapper">
+        <form class="form">
+          <div>
+            <input placeholder="Your name" type="text" class="input" required />
+            <input
+              placeholder="Your email"
+              type="email"
+              class="input"
+              required
+            />
+          </div>
+          <input placeholder="Subject" type="text" class="input" required />
+          <textarea placeholder="Message" class="input"></textarea>
+          <button class="submit-btn">Send Message</button>
+        </form>
+      </div>
+      <div class="address">
+        <h2>Or meet us here.</h2>
+        <div class="wrapper">
+          <div class="text">
+            <a href="mailto:events4us090@gmail.com" class="item">
+              <img src="../assets/img/mail.svg" />
+              events4us090@gmail.com
+            </a>
+            <div class="item">
+              <img src="../assets/img/call.svg" />
+              <a href="tel:+971566396655"> +971 566396655 </a>
+              <a href="tel:+971507633090"> +971 507633090 </a>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/AL%20DIWAN%20AL%20MALAKI%20TENTS%20TR%20LLC/@25.3489,55.6257,17z"
+              target="_blank"
+              class="item"
+            >
+              <img src="../assets/img/location_on.svg" />
+              Emirates Industrial City Al Sajja 2 Sharjah Near To Sajja police
+              station Alongside Ramez hyper market
+            </a>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3605.6685781802107!2d55.6257!3d25.3489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f597ef943f6f3%3A0xcf957e98a668477b!2sAl%20Diwan%20Al%20Malaki%20Tents%20Trdg%20LLC!5e0!3m2!1sen!2s!4v1687435261168!5m2!1sen!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--========== FOOTER ==========-->
 
     <section class="footer">
       <div class="text">
-        <h2>DM Events</h2>
+        <h2>Diwan Al Maliki</h2>
         <p>
           Let&apos;s celebrate your events and help change the world.<br />Feel
           free to reach us out!
