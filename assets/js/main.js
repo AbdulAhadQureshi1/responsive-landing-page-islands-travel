@@ -21,7 +21,7 @@ const showMenu = (toggleId, navId) => {
     toggle.addEventListener("click", () => {
       // We add the show-menu class to the div tag with the nav__menu class
       nav.classList.toggle("show-menu");
-    });
+    }, {passive: true});
   }
 };
 
@@ -94,4 +94,4 @@ function scrollAnimation() {
   islandsPopup.classList.remove("show-popup");
 }
 
-controlImg.forEach((c) => c.addEventListener("click", scrollAnimation));
+controlImg.forEach((c) => c.addEventListener("click", scrollAnimation, {passive: true}));
