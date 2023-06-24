@@ -11,6 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
     <!--========== SWIPER CSS ==========-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
@@ -25,6 +26,7 @@
     <!--========== SWIPER JS ==========-->
     <script src="assets/js/swiper-bundle.min.js" defer></script>
 
+    <script src="assets/js/credentials.js" ></script>
     <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js" defer></script>
   </head>
@@ -345,7 +347,13 @@
           </div>
           <input placeholder="Subject" type="text" class="input" required />
           <textarea placeholder="Message" class="input"></textarea>
-          <button class="submit-btn">Send Message</button>
+          <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
+          <dialog class="error_msg" id="modal">
+            <p id="msg">
+              There was an error sending message.
+            </p>
+            <button id="close">Try Again</button>
+          </dialog>
         </form>
       </div>
       <div class="address">

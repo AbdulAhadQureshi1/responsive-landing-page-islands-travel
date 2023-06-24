@@ -827,6 +827,42 @@ img {
   transition: 200ms;
 }
 
+.error_msg.active {
+  width: 600px;
+  height: 200px;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px 0px rgba(5, 5, 5, 0.2);
+}
+
+.error_msg > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--body-font-size);
+  gap: 10px;
+}
+
+.error_msg > p > i {
+  font-size: 36px;
+}
+
+.error_msg > button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
 @media screen and (max-width:1200px) {
   .contact {
       margin: 15vh 2rem;
