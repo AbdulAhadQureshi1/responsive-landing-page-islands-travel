@@ -28,6 +28,27 @@ document.onreadystatechange = () => {
   }
 };
 
+/*==================== SHOW MENU ====================*/
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
+
+  // Validate that variables exist
+  if (toggle && nav) {
+    toggle.addEventListener(
+      "click",
+      () => {
+        // We add the show-menu class to the div tag with the nav__menu class
+        nav.classList.toggle("show-menu");
+      },
+      { passive: true }
+    );
+  }
+};
+
+showMenu("nav-toggle", "nav-menu");
+
+
 /*==================== FORM ====================*/
 const form = document.querySelector("#submit-btn");
 const inputs = document.querySelectorAll(".input");
@@ -105,25 +126,6 @@ function showDialog(msg, isError) {
   });
 }
 
-/*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
-
-  // Validate that variables exist
-  if (toggle && nav) {
-    toggle.addEventListener(
-      "click",
-      () => {
-        // We add the show-menu class to the div tag with the nav__menu class
-        nav.classList.toggle("show-menu");
-      },
-      { passive: true }
-    );
-  }
-};
-
-showMenu("nav-toggle", "nav-menu");
 
 
 
