@@ -1,6 +1,22 @@
+/*==================== NAVBAR ====================*/
+const observer = new IntersectionObserver(
+  (main) => {
+    document
+      .querySelector("#nav")
+      .classList.toggle("active", !main[0].isIntersecting);
+  },
+  {
+    threshold: 0.8,
+  }
+);
+
+observer.observe(document.querySelector("#main"));
+console.log(window);
+
 /*==================== LOADER ====================*/
-document.onreadystatechange = function () {
+document.onreadystatechange = () => {
   if (document.readyState !== "complete") {
+    document.body.style.overflowY = "hidden";
     document.querySelector("body").style.visibility = "hidden";
     document.querySelector("#spinner").style.visibility = "visible";
     document.querySelector("#spinWrapper").style.visibility = "visible";
@@ -8,6 +24,7 @@ document.onreadystatechange = function () {
     document.querySelector("#spinner").style.display = "none";
     document.querySelector("#spinWrapper").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
+    // document.querySelector("body").style.display = "block";
   }
 };
 
@@ -57,35 +74,36 @@ form.addEventListener("click", (event) => {
     body: userInputs.message,
   };
 
-  emailjs.send(credentials.SERVICE_ID, credentials.TEMPLATE_ID, templateParams).then(
-    function (response) {
-      form.innerHTML = "Send Message";
-      showDialog("Message sent sucessfully", false);
-    },
-    function (error) {
-      form.innerHTML = "Send Message";
-      showDialog("An error has occured", false);
-    }
-  );
-
+  emailjs
+    .send(credentials.SERVICE_ID, credentials.TEMPLATE_ID, templateParams)
+    .then(
+      function (response) {
+        form.innerHTML = "Send Message";
+        showDialog("Message sent sucessfully", false);
+      },
+      function (error) {
+        form.innerHTML = "Send Message";
+        showDialog("An error has occured", false);
+      }
+    );
 });
 
 function showDialog(msg, isError) {
   modal.showModal();
-  modal.classList.add('active')
-  document.body.style.overflowY = 'hidden';
-  document.querySelector("#msg").innerHTML = (isError
-    ? "<i class='bx bxs-error' style='color:#ff2a00'  ></i>"
-    : "<i class='bx bxs-check-circle' style='color:#2fc305'  ></i>") + msg;
-    close.innerHTML = isError ? 'Try Again' : 'Okay';
-    close.style.backgroundColor = isError ? "#ff2a00" : "#2fc305";
-    close.addEventListener("click", () => {
-      modal.close();
-      document.body.style.overflowY = 'auto';
-      modal.classList.remove('active')
+  modal.classList.add("active");
+  document.body.style.overflowY = "hidden";
+  document.querySelector("#msg").innerHTML =
+    (isError
+      ? "<i class='bx bxs-error' style='color:#ff2a00'  ></i>"
+      : "<i class='bx bxs-check-circle' style='color:#2fc305'  ></i>") + msg;
+  close.innerHTML = isError ? "Try Again" : "Okay";
+  close.style.backgroundColor = isError ? "#ff2a00" : "#2fc305";
+  close.addEventListener("click", () => {
+    modal.close();
+    document.body.style.overflowY = "auto";
+    modal.classList.remove("active");
   });
 }
-
 
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) => {
@@ -107,19 +125,7 @@ const showMenu = (toggleId, navId) => {
 
 showMenu("nav-toggle", "nav-menu");
 
-/*==================== NAVBAR ====================*/
-const observer = new IntersectionObserver(
-  (main) => {
-    document
-      .querySelector("#nav")
-      .classList.toggle("active", !main[0].isIntersecting);
-  },
-  {
-    threshold: 0.8,
-  }
-);
 
-observer.observe(document.querySelector("#main"));
 
 /*==================== SWIPER JS ====================*/
 let galleryThumbs = new Swiper(".gallery-thumbs", {

@@ -180,8 +180,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
   width: 100%;
   height: 100vh;
+  background-color: #fff;
 }
 .lds-grid {
   display: inline-block;
@@ -257,6 +261,7 @@ img {
   height: 100vh;
   position: relative;
 }
+
 
 .islands__bg {
   position: absolute;
@@ -548,7 +553,7 @@ img {
   margin-bottom: 0.6rem;
 }
 
-.socials > * {
+.socials > * > * {
   width: 32px;
   height: 32px;
   cursor: pointer;
