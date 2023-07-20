@@ -138,7 +138,10 @@ let galleryThumbs = new Swiper(".gallery-thumbs", {
 let galleryTop = new Swiper(".gallery-top", {
   effect: "fade",
   loop: true,
-
+  autoplay: {
+    delay: 1500,
+  },
+  speed: 800,
   thumbs: {
     swiper: galleryThumbs,
   },
