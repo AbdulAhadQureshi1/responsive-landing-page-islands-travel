@@ -1,5 +1,5 @@
 const credentials = {
-    SERVICE_ID : "service_7o6z9y5",
-    PUBLIC_KEY : "NXRD5puTsuUJUp5uI",
-    TEMPLATE_ID : "template_zryuvd5"
+    SERVICE_ID : "service_xx2u24s",
+    TEMPLATE_ID : "template_d78hnjf",
+    PUBLIC_KEY : "IoRXoD_PrftQZAJ9b"
 }
