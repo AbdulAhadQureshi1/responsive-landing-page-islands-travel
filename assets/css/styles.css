@@ -807,6 +807,8 @@ img {
 .item > a {
   font-size: var(--body-font-size);
   color: var(--dark-color);
+  text-align: left;
+  line-height: 100%;
 }
 .item > img {
   width: 50px;
